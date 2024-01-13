@@ -20,7 +20,7 @@ router
         else {
             user.set(id, {id, password})
             ctx.response.type = 'text/html'
-            ctx.response.body = `<p>註冊成功</p>`
+            ctx.response.body = `<p>註冊成功</p><a href="/Login.html">登入 (Login)</a>`
         }
     })
     .get("/user/Login", (ctx) => {
@@ -45,7 +45,7 @@ router
         let wpath = ctx.params[0]
         console.log('wpath=', wpath)
         await send(ctx, wpath, {
-            root: Deno.cwd()+"/HW4/",
+            root: Deno.cwd()+"/",
             index: "index.html",
         })
     })

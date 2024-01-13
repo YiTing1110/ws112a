@@ -19,7 +19,7 @@ app.use(router.allowedMethods());
 function query(sql) {
   let list = []
   for (const [id, title, body] of db.query(sql)) {
-    list.push({id, title, body})
+    list.push({ id, title, body })
   }
   return list
 }
